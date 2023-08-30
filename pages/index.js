@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import { getSortedPostsData } from '../lib/posts';
+import { getAllPostData, getSortedPostsData } from '../lib/posts';
 import Date from '../components/date';
 
 export default function Home({ allPostsData }) {
@@ -39,7 +39,8 @@ export default function Home({ allPostsData }) {
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = await getSortedPostsData();
+  console.log(allPostsData);
   return {
     props: {
       allPostsData,
