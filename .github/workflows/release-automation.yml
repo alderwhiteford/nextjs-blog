@@ -2,7 +2,7 @@ name: Trigger on Draft Release Creation
 
 on:
   release:
-    types: [prereleased]
+    types: [unpublished]
 
 jobs:
   build:
