@@ -1,0 +1,17 @@
+name: Delete Old Releases
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  delete_old_releases:
+    runs-on: ubuntu-latest
+    env: 
+      GITHUB_TOKEN: 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
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Delete Old Releases
+        run: console.log('HERE!')
