@@ -11,4 +11,4 @@ jobs:
     
     steps:
       - name: Check if it's a draft release
-        run: echo "This is a draft release."
+        run: echo "This is a draft release!"
